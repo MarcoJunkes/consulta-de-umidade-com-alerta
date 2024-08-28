@@ -49,7 +49,7 @@ Para consultar os dados climáticos, envie uma requisição `POST` para o endpoi
 
 ```json
 {
-  "umidade": "50",
+  "umidade": "50%",
   "localizacao": "37.7749 -122.4194"
 }
 
