@@ -9,9 +9,9 @@ export class DadosConsultaController {
   @Post()
   async processaDados(@Body() dados: dadosDTO) {
     const { umidade, localizacao } = dados;
-    
+
     if (!umidade || !localizacao) {
-      throw new Error('Umidade e localização são obrigatórios.');
+      return "Dados obrigatórios não preenchidos!";
     }
 
     const result = await this.dadosConsultaService.processaDadosClima(umidade, localizacao);
